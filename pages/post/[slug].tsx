@@ -71,7 +71,9 @@ function Article({ post }: Props) {
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
       </Head>
       <Header />
-      <img src={urlFor(post.mainImage).url()!} alt="" className='md:max-w-3xl mx-auto'/>
+      <div className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 p-[3px] rounded-xl md:max-w-3xl mx-auto'>
+        <img src={urlFor(post.mainImage).url()!} alt="" className='md:max-w-[761px] mx-auto rounded-xl'/>
+      </div>
       <article className='px-10 md:px-0 md:max-w-3xl mx-auto'>
         <h1 className='text-2xl mt-10 mb-3 font-baskerville font-semibold'>{post.title}</h1>
         <h2 className='text-lg font-franklin font-light text-gray-400'>{post.description}</h2>
