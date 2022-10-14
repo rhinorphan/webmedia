@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import Actu from '../components/Actu';
+import Sport from '../components/Sport';
 import Hero from '../components/Hero';
 import {sanityClient} from "../sanity";
-import ALaUne from '../components/ALaUne';
+import Royaute from '../components/Royaute';
 
 interface Props {
-  aLaUne: [{
+  royaute: [{
     _id: string;
     _createdAt: string;
     publishedAt: string;
@@ -26,7 +26,7 @@ interface Props {
     };
     body: [object];
   }];
-  actus: [{
+  sport: [{
     _id: string;
     _createdAt: string;
     publishedAt: string;
@@ -66,73 +66,13 @@ interface Props {
     };
     body: [object];
   }];
-  modes: [{
-    _id: string;
-    _createdAt: string;
-    publishedAt: string;
-    title: string;
-    author: {
-      name: string;
-      image: string;
-    };
-    description: string;
-    mainImage: {
-      asset: {
-        url: string;
-      };
-    };
-    slug: {
-      current: string;
-    };
-    body: [object];
-  }];
-  beautes: [{
-    _id: string;
-    _createdAt: string;
-    publishedAt: string;
-    title: string;
-    author: {
-      name: string;
-      image: string;
-    };
-    description: string;
-    mainImage: {
-      asset: {
-        url: string;
-      };
-    };
-    slug: {
-      current: string;
-    };
-    body: [object];
-  }];
-  videos: [{
-    _id: string;
-    _createdAt: string;
-    publishedAt: string;
-    title: string;
-    author: {
-      name: string;
-      image: string;
-    };
-    description: string;
-    mainImage: {
-      asset: {
-        url: string;
-      };
-    };
-    slug: {
-      current: string;
-    };
-    body: [object];
-  }];
 }
 
-export default function Home({ aLaUne, actus, politiques, modes, beautes, videos }: Props) {
+export default function Home({ royaute, sport, politiques}: Props) {
   return (
     <div className="max-w-7xl mx-auto">
       <Head>
-        <title>Clarisse Webmedia</title>
+        <title>Peekaboo</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" /> 
         <link rel="preconnect" href="https://fonts.gstatic.com" /> 
@@ -140,14 +80,15 @@ export default function Home({ aLaUne, actus, politiques, modes, beautes, videos
       </Head>
       <Header />
       <Hero />
-      <ALaUne props={aLaUne}/>
-      <Actu props={actus}/>
+      <Royaute props={royaute}/>
+      <Sport props={sport}/>
     </div>
   );
 }
 
 export const getServerSideProps = async () => {
-  const queryALaUne = `*[_type == "post" && "A la une" in categories[]->title] {
+
+  const queryRoyaute = `*[_type == "actu" && "Royauté" in categories[]->title] {
     _id,
     title,
     author -> {
@@ -159,7 +100,7 @@ export const getServerSideProps = async () => {
    slug
   }`;
 
-  const queryActu = `*[_type == "post" && "Actualité" in categories[]->title] {
+  const querySport = `*[_type == "actu" && "Sport" in categories[]->title] {
     _id,
     title,
     author -> {
@@ -171,7 +112,7 @@ export const getServerSideProps = async () => {
    slug
   }`;
 
-  const queryPolitique = `*[_type == "post" && "Politique" in categories[]->title] {
+  const queryPolitique = `*[_type == "actu" && "Politique" in categories[]->title] {
     _id,
     title,
     author -> {
@@ -183,57 +124,16 @@ export const getServerSideProps = async () => {
    slug
   }`;
 
-  const queryMode = `*[_type == "post" && "Mode" in categories[]->title] {
-    _id,
-    title,
-    author -> {
-    name,
-    image
-  },
-   description,
-   mainImage,
-   slug
-  }`;
-
-  const queryBeaute = `*[_type == "post" && "Beauté" in categories[]->title] {
-    _id,
-    title,
-    author -> {
-    name,
-    image
-  },
-   description,
-   mainImage,
-   slug
-  }`;
-
-  const queryVideo = `*[_type == "post" && "Vidéo" in categories[]->title] {
-    _id,
-    title,
-    author -> {
-    name,
-    image
-  },
-   description,
-   mainImage,
-   slug
-  }`;
-
-  const aLaUne = await sanityClient.fetch(queryALaUne);
-  const actus = await sanityClient.fetch(queryActu);
+  
+  const royaute = await sanityClient.fetch(queryRoyaute);
+  const sport = await sanityClient.fetch(querySport);
   const politiques = await sanityClient.fetch(queryPolitique);
-  const modes = await sanityClient.fetch(queryMode);
-  const beautes = await sanityClient.fetch(queryBeaute);
-  const videos = await sanityClient.fetch(queryVideo);
 
   return {
     props: {
-      aLaUne,
-      actus,
+      royaute,
+      sport,
       politiques,
-      modes,
-      beautes,
-      videos
     }
   }
 };

@@ -24,15 +24,15 @@ interface Props {
   }]
 };
 
-function Actu({props} : Props) {
+function Royaute({props} : Props) {
   return (
     <div className='text-gray-800'>
       <div className='text-2xl md:text-3xl lg:text-5xl font-franklin font-bold mt-5 p-2 md:p-4 text-white'>
-        <h1>Actualité</h1>
+        <h1>Royauté</h1>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-4'>
         {props.map(prop => (
-          <Link key={prop._id} href={`/post/${prop.slug.current}`}>
+          <Link key={prop._id} href={`/actu/${prop.slug.current}`}>
             <div className='group bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 p-[3px] rounded-xl overflow-hidden cursor-pointer card'>
               <div className='overflow-hidden rounded-xl'>
                 <img src={
@@ -54,4 +54,4 @@ function Actu({props} : Props) {
   )
 }
 
-export default Actu
+export default Royaute

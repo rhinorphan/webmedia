@@ -64,7 +64,7 @@ function Article({ post }: Props) {
   return (
     <main>
       <Head>
-        <title>Clarisse Webmedia</title>
+        <title>Peekaboo</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" /> 
         <link rel="preconnect" href="https://fonts.gstatic.com" /> 
@@ -100,7 +100,7 @@ function Article({ post }: Props) {
 export default Article;
 
 export const getStaticPaths = async () => {
-  const query = `*[_type == "post"] {
+  const query = `*[_type == "actu"] {
     _id,
     slug {
      current
@@ -122,7 +122,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const query = `*[_type == "post" && slug.current == $slug] [0] {
+  const query = `*[_type == "actu" && slug.current == $slug] [0] {
     _id,
     _createdAt,
     publishedAt,
