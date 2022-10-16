@@ -24,7 +24,7 @@ function Header() {
           </div>
           <button className="hover:bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text hover:text-transparent transition duration-500 ease-in-out" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMenu2" aria-expanded="false" aria-controls="collapseMenu2">Société</button>
           <div className="collapse collapse-horizontal" id="collapseMenu2">
-            <div className="block w-[267px]">
+            <div className="block w-[300px]">
               <ol className="flex gap-2 text-xs">
                 <li><a href="/" className="hover:bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text hover:text-transparent transition duration-500">Conso</a></li>
                 <li><a href="/" className="hover:bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text hover:text-transparent transition duration-500">Santé</a></li>

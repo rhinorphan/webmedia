@@ -8,12 +8,16 @@
   "dependencies": {
     "@portabletext/react": "^1.0.6",
     "@sanity/image-url": "^1.0.1",
+    "bootstrap": "^5.2.2",
     "next": "latest",
     "next-sanity": "^0.8.4",
     "react": "18.1.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "18.1.0",
     "react-portable-text": "^0.5.1",
-    "react-twitter-embed": "^4.0.4"
+    "react-smooth-collapse": "^2.1.2",
+    "react-twitter-embed": "^4.0.4",
+    "tw-elements": "^1.0.0-alpha12"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
