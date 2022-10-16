@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   useEffect(() => {
     const use = async () => {
-      (await require('tw-elements')).default;
+      (await import('tw-elements')).default;
         };
         use();
   }, []);
