@@ -2,7 +2,7 @@ function Header() {
 
   return (
     <footer className="flex justify-center mx-auto font-franklin text-xs md:text-sm font-semibold bg-[#000000] border-t-poppy border-t-2 text-cement mt-10">
-      <div className="flex flex-row gap-4 text-center p-4">
+      <div className="flex flex-row gap-4 text-center p-3">
         <p className="text-gray-800">
           © 2022 Peekaboo - Tous droits réservés
         </p>

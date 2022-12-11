@@ -27,13 +27,13 @@ interface Props {
 function People({props} : Props) {
   return (
     <div className='text-gray-800'>
-    <div className='text-xl md:text-2xl lg:text-3xl font-franklin font-bold mt-5 p-2 md:p-4 '>
+    <div className='text-xl md:text-2xl lg:text-3xl font-franklin font-bold mt-5 p-2 md:p-4'>
       <h1>People</h1>
     </div>
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-4'>
       {props.map(prop => (
         <Link key={prop._id} href={`/actu/${prop.slug.current}`}>
-          <div className='group border-poppy border-[3px] rounded-2xl overflow-hidden cursor-pointer card bg-[#000000]'>
+          <div className='group border-poppy border-[3px] rounded-2xl overflow-hidden cursor-pointer card bg-[#000000] shadow-2xl'>
             <div className='overflow-hidden rounded-xl'>
               <img src={
                 urlFor(prop.mainImage).url()!

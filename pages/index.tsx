@@ -358,7 +358,7 @@ export default function Home({ people, royaute, sport, politiques, alaune, hero2
           <Hero props={alaune}/>
         </div>
         <div className='flex justify-center items-center md:w-full alaune pb-10'>
-        <div className='flex flex-row overflow-x-scroll gap-6 font-baskerville max-w-5xl md:w-[90%] mx-4 overflow-y-hidden h-fit scroll py-4 md:flex-col md:overflow-hidden'>
+        <div className='flex flex-row overflow-x-scroll gap-6 font-baskerville max-w-5xl md:w-[90%] mx-4 overflow-y-hidden h-fit scroll py-4 md:flex-col md:overflow-visible'>
         <Hero2 props={hero2}/>
         <Hero3 props={hero3}/>
         <Hero4 props={hero4}/>
@@ -367,7 +367,7 @@ export default function Home({ people, royaute, sport, politiques, alaune, hero2
         <div className='actu'>
           <div className='content pb-10'>
           <div>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl border-[#000000] border-[3px] shadow-2xl'>
               Actualité
             </h1>
           </div>
@@ -380,7 +380,7 @@ export default function Home({ people, royaute, sport, politiques, alaune, hero2
           <div className='alaune'>
           <div className='pb-10'>
           <div>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl border-[#000000] border-[3px] shadow-2xl'>
               Société
             </h1>
           </div>
@@ -393,7 +393,7 @@ export default function Home({ people, royaute, sport, politiques, alaune, hero2
           <div className='actu'>
           <div className='content'>
           <div>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl border-[#000000] border-[3px] shadow-2xl'>
               Culture G
             </h1>
           </div>
