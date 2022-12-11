@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { urlFor } from "../sanity";
 
 interface Props {
-  props: [{
+  props: {
     _id: string;
     _createdAt: string;
     publishedAt: string;
@@ -21,47 +21,7 @@ interface Props {
       current: string;
     };
     body: [object];
-  }];
-  props2: [{
-    _id: string;
-    _createdAt: string;
-    publishedAt: string;
-    title: string;
-    author: {
-      name: string;
-      image: string;
-    };
-    description: string;
-    mainImage: {
-      asset: {
-        url: string;
-      };
-    };
-    slug: {
-      current: string;
-    };
-    body: [object];
-  }];
-  props3: [{
-    _id: string;
-    _createdAt: string;
-    publishedAt: string;
-    title: string;
-    author: {
-      name: string;
-      image: string;
-    };
-    description: string;
-    mainImage: {
-      asset: {
-        url: string;
-      };
-    };
-    slug: {
-      current: string;
-    };
-    body: [object];
-  }]
+  };
 };
 
 function Hero3({props} : Props) {

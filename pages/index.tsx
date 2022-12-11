@@ -20,7 +20,7 @@ import Histoire from '../components/Histoire';
 import Sciences from '../components/Sciences';
 
 interface Props {
-  alaune: [{
+  alaune: {
     _id: string;
     _createdAt: string;
     publishedAt: string;
@@ -39,7 +39,7 @@ interface Props {
       current: string;
     };
     body: [object];
-  }];
+  };
   hero2: [{
     _id: string;
     _createdAt: string;
@@ -60,7 +60,7 @@ interface Props {
     };
     body: [object];
   }];
-  hero3: [{
+  hero3: {
     _id: string;
     _createdAt: string;
     publishedAt: string;
@@ -79,7 +79,7 @@ interface Props {
       current: string;
     };
     body: [object];
-  }];
+  };
   hero4: [{
     _id: string;
     _createdAt: string;
