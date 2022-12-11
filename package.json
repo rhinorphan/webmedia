@@ -8,6 +8,7 @@
   "dependencies": {
     "@portabletext/react": "^1.0.6",
     "@sanity/image-url": "^1.0.1",
+    "@vercel/analytics": "^0.1.6",
     "bootstrap": "^5.2.2",
     "next": "latest",
     "next-sanity": "^0.8.4",
