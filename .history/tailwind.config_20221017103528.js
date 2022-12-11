@@ -15,7 +15,7 @@ module.exports = {
     colors: {
       'space': '#303841',
       'night': '#3A4750',
-      'poppy': '#D72323',
+      'red': '#D72323',
       'cement': '#EEEEEE',
     },
   },

@@ -6,18 +6,11 @@ module.exports = {
     './node_modules/tw-elements/dist/js/**/*.js',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        franklin: ['Libre Franklin'],
-        baskerville: ['Libre Baskerville']
-      }
-    },
-    colors: {
-      'space': '#303841',
-      'night': '#3A4750',
-      'poppy': '#D72323',
-      'cement': '#EEEEEE',
-    },
+    extend: {fontFamily: {
+      franklin: ['Libre Franklin'],
+      baskerville: ['Libre Baskerville']
+    }
+  },
   },
   plugins: [
     require('tw-elements/dist/plugin')

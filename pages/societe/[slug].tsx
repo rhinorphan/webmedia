@@ -78,10 +78,10 @@ function Article({ post }: Props) {
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
       </Head>
       <Header />
-      <div className=' p-[3px] rounded-xl md:max-w-3xl mx-auto'>
-        <img src={urlFor(post.mainImage).url()!} alt="" className='md:w-[761px] mx-auto rounded-xl'/>
+      <div className='p-[3px] rounded-xl md:max-w-3xl mx-auto'>
+        <img src={urlFor(post.mainImage).url()!} alt="" className='w-[761px] mx-auto rounded-xl'/>
       </div>
-      <article className='px-10 md:px-0 md:max-w-3xl mx-auto  text-[#FFFF]'>
+      <article className='px-10 md:px-0 md:max-w-3xl mx-auto text-[#FFFF]'>
         <h1 className='text-2xl mt-10 mb-3 font-baskerville font-semibold text-poppy'>{post.title}</h1>
         <h2 className='text-lg font-franklin font-light text-gray-400'>{post.description}</h2>
         <div className='flex items-center gap-2 pt-4'>
@@ -89,7 +89,7 @@ function Article({ post }: Props) {
             <img src={urlFor(post.author.image).url()} alt="" className='h-12 w-12 p-1' />
           </div>
           <p className='font-extralight text-sm font-franklin'>
-            Blog post by <span className='font-semibold text-poppy'>{post.author.name}</span> - Published at {" "} {new Date(post.publishedAt).toLocaleString()}
+            Blog post by <span className='text-poppy font-semibold'>{post.author.name}</span> - Published at {" "} {new Date(post.publishedAt).toLocaleString()}
           </p>
         </div>
         <div className='mt-6 text-justify'>
@@ -107,7 +107,7 @@ function Article({ post }: Props) {
 export default Article;
 
 export const getStaticPaths = async () => {
-  const query = `*[_type == "actu"] {
+  const query = `*[_type == "societe"] {
     _id,
     slug {
      current
@@ -129,7 +129,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const query = `*[_type == "actu" && slug.current == $slug] [0] {
+  const query = `*[_type == "societe" && slug.current == $slug] [0] {
     _id,
     _createdAt,
     publishedAt,
