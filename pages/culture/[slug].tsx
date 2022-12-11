@@ -5,6 +5,7 @@ import {sanityClient, urlFor} from '../../sanity';
 import { Post } from '../../typings';
 import {PortableText} from '@portabletext/react';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import Footer from '../../components/Footer';
 
 interface Props {
   post: {
@@ -99,6 +100,7 @@ function Article({ post }: Props) {
           />
         </div>
       </article>
+      <Footer />
     </main>
   );
 

@@ -367,7 +367,7 @@ export default function Home({ people, royaute, sport, politiques, alaune, hero2
         <div className='actu'>
           <div className='content pb-10'>
           <div>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl border-[#000000] border-[3px] shadow-2xl'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-[#000000] max-w-fit rounded-2xl border-poppy border-[3px] shadow-2xl'>
               Actualité
             </h1>
           </div>
@@ -380,7 +380,7 @@ export default function Home({ people, royaute, sport, politiques, alaune, hero2
           <div className='alaune'>
           <div className='pb-10'>
           <div>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl border-[#000000] border-[3px] shadow-2xl'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-[#000000] max-w-fit rounded-2xl border-poppy border-[3px] shadow-2xl'>
               Société
             </h1>
           </div>
@@ -393,7 +393,7 @@ export default function Home({ people, royaute, sport, politiques, alaune, hero2
           <div className='actu'>
           <div className='content'>
           <div>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-poppy max-w-fit rounded-2xl border-[#000000] border-[3px] shadow-2xl'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl font-franklin font-bold ml-1 md:ml-4 p-2 md:p-4 bg-[#000000] max-w-fit rounded-2xl border-poppy border-[3px] shadow-2xl'>
               Culture G
             </h1>
           </div>
@@ -567,7 +567,7 @@ export const getServerSideProps = async () => {
    slug
   }`;
 
-  const queryLSV = `*[_type == "culture" && "Le Saviez Vous?" in categories[]->title] {
+  const queryLSV = `*[_type == "culture" && "Le Saviez Vous ?" in categories[]->title] {
     _id,
     title,
     author -> {

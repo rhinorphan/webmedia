@@ -15,10 +15,10 @@ function Header() {
           <div className="collapse collapse-horizontal" id="collapseMenu1" data-bs-parent="#menu">
             <div className="block max-w-sm">
               <ol className="flex gap-2 text-xs">
-                <li><a href="/" className="hover:text-poppy transition duration-500">People</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Royauté</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Politique</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Sport</a></li>
+                <li><a href="/people" className="hover:text-poppy transition duration-500">People</a></li>
+                <li><a href="/royaute" className="hover:text-poppy transition duration-500">Royauté</a></li>
+                <li><a href="/politique" className="hover:text-poppy transition duration-500">Politique</a></li>
+                <li><a href="/sport" className="hover:text-poppy transition duration-500">Sport</a></li>
               </ol>
             </div>
           </div>
@@ -26,10 +26,10 @@ function Header() {
           <div className="collapse collapse-horizontal" id="collapseMenu2" data-bs-parent="#menu">
             <div className="block w-[267px]">
               <ol className="flex gap-2 text-xs">
-                <li><a href="/" className="hover:text-poppy transition duration-500">Conso</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Santé</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Gouvernement</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Programme TV</a></li>
+                <li><a href="/conso" className="hover:text-poppy transition duration-500">Conso</a></li>
+                <li><a href="/sante" className="hover:text-poppy transition duration-500">Santé</a></li>
+                <li><a href="/gouv" className="hover:text-poppy transition duration-500">Gouvernement</a></li>
+                <li><a href="/programmetv" className="hover:text-poppy transition duration-500">Programme TV</a></li>
               </ol>
             </div>
           </div>
@@ -37,10 +37,10 @@ function Header() {
           <div className="collapse collapse-horizontal" id="collapseMenu3" data-bs-parent="#menu">
             <div className="w-[250px]">
               <ol className="flex gap-2 text-xs">
-                <li><a href="/" className="hover:text-poppy transition duration-500">Quizz</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Le Saviez Vous ?</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Histoire</a></li>
-                <li><a href="/" className="hover:text-poppy transition duration-500">Sciences</a></li>
+                <li><a href="/quizz" className="hover:text-poppy transition duration-500">Quizz</a></li>
+                <li><a href="/lesaviezvous" className="hover:text-poppy transition duration-500">Le Saviez Vous ?</a></li>
+                <li><a href="/histoire" className="hover:text-poppy transition duration-500">Histoire</a></li>
+                <li><a href="/sciences" className="hover:text-poppy transition duration-500">Sciences</a></li>
               </ol>
             </div>
           </div>
@@ -57,24 +57,24 @@ function Header() {
             <ul>
               <li className="text-lg text-poppy">Actualité</li>
                 <ul className="flex flex-col py-1 px-3 gap-1">
-                  <li><a className="hover:text-poppy" href="/">People</a></li>
-                  <li><a className="hover:text-poppy" href="/">Royauté</a></li>
-                  <li><a className="hover:text-poppy" href="/">Politique</a></li>
-                  <li><a className="hover:text-poppy" href="/">Sport</a></li>
+                  <li><a className="hover:text-poppy" href="/people">People</a></li>
+                  <li><a className="hover:text-poppy" href="/royaute">Royauté</a></li>
+                  <li><a className="hover:text-poppy" href="/politique">Politique</a></li>
+                  <li><a className="hover:text-poppy" href="/sport">Sport</a></li>
                 </ul>
               <li className="text-lg text-poppy">Société</li>
                 <ul className="flex flex-col py-1 px-3 gap-1">
-                  <li><a className="hover:text-poppy" href="/">Conso</a></li>
-                  <li><a className="hover:text-poppy" href="/">Santé</a></li>
-                  <li><a className="hover:text-poppy" href="/">Gouvernement</a></li>
-                  <li><a className="hover:text-poppy" href="/">Programme TV</a></li>
+                  <li><a className="hover:text-poppy" href="/conso">Conso</a></li>
+                  <li><a className="hover:text-poppy" href="/sante">Santé</a></li>
+                  <li><a className="hover:text-poppy" href="/gouv">Gouvernement</a></li>
+                  <li><a className="hover:text-poppy" href="/programmetv">Programme TV</a></li>
                 </ul>
               <li className="text-lg text-poppy">Culture G</li>
                 <ul className="flex flex-col py-1 px-3 gap-1">
-                  <li><a className="hover:text-poppy" href="/">Quizz</a></li>
-                  <li><a className="hover:text-poppy" href="/">Le Saviez vous ?</a></li>
-                  <li><a className="hover:text-poppy" href="/">Histoire</a></li>
-                  <li><a className="hover:text-poppy" href="/">Sciences</a></li>
+                  <li><a className="hover:text-poppy" href="/quizz">Quizz</a></li>
+                  <li><a className="hover:text-poppy" href="/lesaviezvous">Le Saviez vous ?</a></li>
+                  <li><a className="hover:text-poppy" href="/histoire">Histoire</a></li>
+                  <li><a className="hover:text-poppy" href="/sciences">Sciences</a></li>
                 </ul>
             </ul>
           </div>

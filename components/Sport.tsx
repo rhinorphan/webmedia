@@ -27,10 +27,10 @@ interface Props {
 function Sport({props} : Props) {
   return (
     <div className='text-gray-800'>
-      <div className='text-xl md:text-2xl lg:text-3xl font-franklin font-bold mt-5 p-2 md:p-4'>
-        <h1>Sport</h1>
-      </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-4'>
+      <div className='relative text-xl lg:text-2xl font-franklin font-bold mt-5 p-4 md:p-4 bg-poppy w-fit ml-4 rounded-2xl border-[#000000] border-[3px] z-50'>
+      <h1>Sport</h1>
+    </div>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-4 -mt-8'>
       {props.map(prop => (
           <Link key={prop._id} href={`/actu/${prop.slug.current}`}>
             <div className='group border-poppy border-[3px] rounded-2xl overflow-hidden cursor-pointer card bg-[#000000] shadow-2xl'>
