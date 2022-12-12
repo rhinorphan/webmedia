@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         franklin: ['Libre Franklin'],
         baskerville: ['Libre Baskerville']
+      },
+      scale: {
+        '-100': '-1',
       }
     },
     colors: {
